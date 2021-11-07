@@ -1,0 +1,60 @@
+#d1 {
+    background-color: rgb(62, 185, 144);
+    width: 150px;
+    height: 150px;
+    box-shadow: 4px 4px aquamarine, 8px 8px rgb(168, 247, 222);
+    margin-bottom: 20px;
+}
+
+#d2 {
+    background: rgb(62, 185, 144);
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#d2::after, #d2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#d2::after {
+    background: aquamarine;
+    top: 5px;
+    left: 5px;
+}
+
+#d2::before {
+    background: rgb(168, 247, 222);
+    top: 10px;
+    left: 10px;
+}
+
+.one {
+    background: rgb(168, 247, 222);
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.two {
+    background: aquamarine;
+    width: 150px;
+    height: 150px;
+}
+
+.three {
+    background: rgb(62, 185, 144);
+    width: 150px;
+    height: 150px;
+}
+
+.two, .three {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
