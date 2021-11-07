@@ -1,0 +1,40 @@
+.area {
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.object {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background: radial-gradient(circle at 30px 30px, #f1eff0, #701a4e);
+    animation: obj 20s infinite;
+}
+
+@keyframes obj {
+    0% {}
+    10% {
+        border-radius: 0;
+    }
+    30% {
+        background: radial-gradient(circle at 30px 30px, #f7f7f8, #121313);
+    }
+    50% {
+        transform: skew(40deg);
+        width: 40px;
+        height: 40px;
+    }
+    70% {
+        transform: rotate(180deg);
+    }
+    95% {
+        background: radial-gradient(circle at 30px 30px, #09fc2a, #121313);
+    }
+    100% {
+        border-radius: 30px;
+    }
+}
