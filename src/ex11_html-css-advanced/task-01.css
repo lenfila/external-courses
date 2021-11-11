@@ -1,0 +1,104 @@
+.loader {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 40px 20px 20px 20px;
+    border-radius: 5px;
+    background-color: #f3b3b3;
+    text-align: center;
+}
+
+.loader:last-child {
+    margin-right: 0;
+}
+
+.ball {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: #a35485;
+}
+
+.load .ball:nth-last-child(1) {
+    animation: loading 0.6s 0.1s linear infinite;
+}
+
+.load .ball:nth-last-child(2) {
+    animation: loading 0.6s 0.2s linear infinite;
+}
+
+.load .ball:nth-last-child(3) {
+    animation: loading 0.6s 0.3s linear infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, 15px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.block1 {
+    width: 100px;
+    height: 100px;
+    margin: 20px 0px 0px;
+    border-radius: 5px;
+    background-color: #f3b3b3;
+}
+
+.block2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: #f3b3b3;
+}
+
+.areaball {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.ball2 {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: #a35485;
+    animation: bal 3s linear infinite, balleft 24s linear infinite alternate;
+}
+
+@keyframes bal {
+    0% {
+        bottom: 100%;
+    }
+    25% {
+        bottom: 10px;
+    }
+    30% {
+        bottom: 0px;
+    }
+    35% {
+        bottom: 10px;
+    }
+    100% {
+        bottom: 100%;
+    }
+}
+
+@keyframes balleft {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: 100%;
+    }
+}
